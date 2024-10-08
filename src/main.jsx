@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import SignInPage from './auth/sign-in/index.jsx'
 import Exercises from './Exercises/Exercises.jsx'
 import Blogs from './Blogs/Blogs.jsx'
-import About from './About/About.jsx'
+import About from './About/AboutUs.jsx'
 import Profile from './Profile/Profile.jsx'
 import Home from './LandingPage/index.jsx'
 import {  ClerkProvider } from '@clerk/clerk-react'
@@ -20,6 +20,8 @@ import FetchExercisesByCategory from './Exercises/fetch_exercises_by_category.js
 import ExerciseDetails from './Exercises/fetch_exercise_by_id.jsx'
 
 import ExerciseSuggestions from './Exercises/fetch_exercises-by-Ai.jsx'
+import New_blog from './Blogs/New_blog.jsx'
+import BlogDetails from './Blogs/BlogDetails.jsx'
 // Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -75,6 +77,14 @@ const router = createBrowserRouter(
           {
             path:'/exercise-suggestions',
             element:<ExerciseSuggestions/>
+          },
+          {
+            path:'/blogs/new',
+            element:<New_blog/>
+          },
+          {
+            path:'/blogs/:id',
+            element: <BlogDetails/>
           }
 
         ]

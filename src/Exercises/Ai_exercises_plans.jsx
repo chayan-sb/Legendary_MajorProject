@@ -181,7 +181,7 @@ const Ai_exercises_plans = () => {
                             onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0056b3'}
                             onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#007BFF'}
                         >
-                            {loading ? "Loading..." : "Get Your Plan!"}
+                            {loading ? "Loading..." : "Generate Your Plan!"}
                         </button>
                     </form>
                 </div>
